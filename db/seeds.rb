@@ -1,8 +1,17 @@
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}")
+end
+
+puts "3 topics created"
+
+
 10.times do |x|
   Blog.create!(
   	title: "My Blog Post #{x}",
   	body: "Discover interesting projects and people to populate your personal news feed.
-	Your news feed helps you keep up with recent activity on repositories you watch and people you follow."
+	Your news feed helps you keep up with recent activity on repositories you watch and people you follow.",
+    topic_id: Topic.last.id
 )
 end
 
@@ -17,15 +26,26 @@ end
 
 puts "5 skills created"
 
-9.times do |portfolio_item|
+8.times do |portfolio_item|
   Portfolio.create!(
   	title: "Portfolio title #{portfolio_item}",
-  	subtitle: "My great service",
+  	subtitle: "Ruby on rails",
   	body: "Learn Git and GitHub without any code!
 	Using the Hello World guide, you’ll create a repository, start a branch, write comments, and open a pull request.",
 	main_image: "https://via.placeholder.com/600x400",
 	thumb_image: "https://via.placeholder.com/350x200"
   	)
+end
+
+1.times do |portfolio_item|
+  Portfolio.create!(
+    title: "Portfolio title #{portfolio_item}",
+    subtitle: "Angular",
+    body: "Learn Git and GitHub without any code!
+  Using the Hello World guide, you’ll create a repository, start a branch, write comments, and open a pull request.",
+  main_image: "https://via.placeholder.com/600x400",
+  thumb_image: "https://via.placeholder.com/350x200"
+    )
 end
 
 puts "9 portfolio created"
