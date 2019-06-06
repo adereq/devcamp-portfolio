@@ -60,3 +60,5 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
 gem 'adriano_view_tool','~> 0.2.0' , git: 'https://github.com/adereq/adriano_view_tool'
+
+gem 'petergate', '~> 2.0', '>= 2.0.1'
