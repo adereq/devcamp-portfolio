@@ -20,4 +20,8 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator
+    AdrianoViewTool::Renderer.copyright 'Adrian', 'All rights reserved'
+  end
+
 end
