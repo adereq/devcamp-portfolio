@@ -62,3 +62,5 @@ gem 'jquery-rails'
 gem 'adriano_view_tool','~> 0.2.0' , git: 'https://github.com/adereq/adriano_view_tool'
 
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
