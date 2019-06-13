@@ -25,9 +25,10 @@ class PortfoliosController < ApplicationController
 
   def create
     @portfolio_item = Portfolio.new(portfolio_params)
-
     respond_to do |format|
+
       if @portfolio_item.save
+        byebug
         format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
       else
         format.html { render :new }
@@ -60,8 +61,14 @@ class PortfoliosController < ApplicationController
 
   private
     def portfolio_params
-      params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
-    end
+      params.require(:portfolio).permit(:title,
+                                      :subtitle,
+                                      :body,
+                                      :main_image,
+                                      :thumb_image,
+                                      technologies_attributes: [:name]
+                                     )
+  end
 
     def set_portfolio_item
       @portfolio_item = Portfolio.find(params[:id])
