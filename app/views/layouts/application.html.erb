@@ -17,7 +17,15 @@
       <div class="site-wrapper-inner">
         <div class="cover-container">
 
-          <div id="background"></div>
+            <%= video_tag(
+              'testowe3.vid',
+              id: 'background',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              poster: 'kon.jpg'
+            )
+            %>
           <%= render "shared/application_nav" %>
           
           <%= yield %>
